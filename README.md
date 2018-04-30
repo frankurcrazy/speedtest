@@ -11,5 +11,9 @@ To launch the server:
 python server.py
 ```
 
-The server will listen on port 9487 and waiting for client to connect. ***What about client?***
-As mentioned earlier, at current stage, only the server side is provided. In order to connect to the server, we can use `netcat` along with `dd` and `pv`.
+The client is not ready yet, please use `netcat` along with `dd` for now
+```sh
+dd if=/dev/zero bs=32k | nc [server ip] [server port] > /dev/null
+```
+
+

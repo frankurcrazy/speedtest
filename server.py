@@ -135,7 +135,7 @@ class SpeedtestServer(object):
                     if d:
                         self.contexts[s].dataReceived(d)
                     else:
-                        self.contexts[s].connectionLost()
+                        self.contexts[s].connectionLost("Peer disconnected")
                         if s in w:
                             w.remove(s)
 
